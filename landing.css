@@ -1,0 +1,33 @@
+body {
+	background-image: url('http://www.psdgraphics.com/file/colorful-triangles-background.jpg');
+	background-repeat: no-repeat;
+	background-position: right top;	
+}
+h1 {
+	font-size: 3em;
+}
+
+ul >li {
+  list-style: none;
+  display: inline-block;
+  font-size: 2em;
+  font-weight: bold;
+  color: #000080;
+}
+ul, h1 {
+	text-align: center;
+}
+.thumbnail {
+    float: left;
+    width: 140px;
+    height: 140px;
+}
+.Links > li {
+	margin-top: 3em;
+	margin-right: 1em
+
+}
+.pics > li {
+	margin-top: 1em;
+	margin-right: 2em;
+}

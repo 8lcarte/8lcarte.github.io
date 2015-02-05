@@ -1,0 +1,78 @@
+body{
+  font-family: "Open Sans";
+}
+.masthead {
+  background-image: url(http://outdoorend.com/media/skiing.jpeg);
+  padding: 1em 0 0.5em 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.masthead-heading,
+.masthead-name {
+  text-align: center;
+}
+.masthead-name {
+  color: orange;
+  font-size: 4em;
+  margin-bottom: -.8em;
+  margin-top: -0.2em;
+  font-family: "Gentium Book Basic", Georgia, serif;
+}
+.masthead-heading{
+  color: aqua;
+  font-size: 3em;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+section {
+  text-align: left;
+}
+.question {
+  color: green;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-shadow: 2px 2px 3px green;
+}
+.introduction-section,
+.home-section,
+.more-section {
+  max-width: 38em;
+  margin-left: auto;
+  margin-right: auto;
+}
+footer {
+  margin-top: 5em;
+  padding: 2em;
+  background-color: orange;
+  text-align: center;
+}
+.footer-text {
+  font-style: italic;
+  font-weight: bold;
+  color: white;
+}
+ul >li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 1em;
+}
+a {
+  font-weight: bold;
+	text-decoration: none;
+	color: navy;
+}
+
+/* media query section */
+
+@media only screen and (max-width: 500px) {
+  .masthead-name {
+    font-size: 2em;
+  }
+  .masthead-heading {
+    font-size: 1em;
+  }
+  .footer-text {
+    font-size: 12px;
+  }
+}
