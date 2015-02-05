@@ -1,0 +1,47 @@
+/*background and outside*/
+body{
+	background-image: url('../images/supermarche.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+
+/* Main App */
+.container {
+	background-color: blue;
+	width: 50em;
+	height: 30em;
+	margin: auto;
+}
+
+.app-main {
+	margin-top: 2em;
+	text-align: center;
+	height: 25em;
+}
+h1 {
+	color: white;
+	font-weight: bold;
+	background-color: green;
+}
+ul {
+	list-style: none;
+	text-align: left;
+}
+li {
+  font-size: 2em;
+  font-weight: bold;
+  color: #000080;
+}
+.check {
+	height: 17px;
+	width: 17px;
+	background-color: white;
+}
+.item {
+	position: relative;
+	left: 30px;
+	bottom: 20px;
+}
+.items {
+}
