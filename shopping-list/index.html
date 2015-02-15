@@ -4,23 +4,28 @@
 	<meta charset="UTF-8">
 	<title>Shopping List</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="js/main.js"></script>
 </head>
 <body>
 	<div class="container">
 		<div class="app-main">
 			<h1>My Shopping List</h1>
 			<input id="input"></input>
-			<button type="submit">Add</button>
+			<button type="submit" id="submit">Add</button>
 			<ul id="list">
 					<li class="items">
 						<div class="check"></div>
-						<div class="item">Pizza</div>
+						<span class="item">Pizza</span>
+						<img class="delete" src="images/delete.png">
 					<li class="items">
 						<div class="check"></div>
-						<div class="item">Salt</div>
+						<span class="item">Salt</span>
+						<img class="delete" src="images/delete.png">
 					<li class="items">
 						<div class="check"></div>
-						<div class="item">Chicken</div>
+						<span class="item">Chicken</span>
+						<img class="delete" src="images/delete.png">
 					</li>
 				</ul>
 		</div>

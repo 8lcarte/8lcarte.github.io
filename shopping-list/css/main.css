@@ -8,40 +8,53 @@ body{
 
 /* Main App */
 .container {
-	background-color: blue;
 	width: 50em;
-	height: 30em;
 	margin: auto;
+	background-color: #000322;
+	border: 5px solid #979797;
+	box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.50);
+	border-radius: 2px;
 }
 
 .app-main {
 	margin-top: 2em;
 	text-align: center;
-	height: 25em;
 }
 h1 {
 	color: white;
 	font-weight: bold;
-	background-color: green;
 }
 ul {
 	list-style: none;
 	text-align: left;
+	margin-top: 2em;
 }
-li {
+#list .items {
   font-size: 2em;
   font-weight: bold;
-  color: #000080;
+  color: #899832;
+  margin-left: 6.5em;
+  outline: 	#899832 1px solid;
+  width: 10em;
+  padding-top: 20px;
+}
+.strike {
+	text-decoration: line-through;
 }
 .check {
 	height: 17px;
 	width: 17px;
 	background-color: white;
 }
+.Checked {
+	background-color: #899832;
+}
 .item {
 	position: relative;
 	left: 30px;
 	bottom: 20px;
 }
-.items {
+.delete {
+	float: right;
+	margin-top: -.5em;
 }
