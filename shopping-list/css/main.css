@@ -58,3 +58,6 @@ ul {
 	float: right;
 	margin-top: -.5em;
 }
+.delete, .check {
+	cursor: pointer;
+}
