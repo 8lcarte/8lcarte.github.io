@@ -61,3 +61,18 @@ ul {
 .delete, .check {
 	cursor: pointer;
 }
+
+/* Responsiveness */
+@media only screen and (max-width: 600px) {
+		.container {
+			width: 400px;
+		}
+		#list .items {
+			margin-left: 0em;
+		}
+}
+
+
+
+
+
