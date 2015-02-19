@@ -1,8 +1,10 @@
 /*background and outside*/
+html, body {
+	height: 100%;
+}
 body{
-	background-image: url('../images/supermarche.png');
-	background-repeat: no-repeat;
-	background-size: 100%;
+	background: #000 url('../images/supermarche.png') no-repeat fixed;
+	background-size: 100% 100%;
 }
 
 
@@ -10,10 +12,8 @@ body{
 .container {
 	width: 50em;
 	margin: auto;
-	background-color: #000322;
-	border: 5px solid #979797;
-	box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.50);
-	border-radius: 2px;
+	background-color: rgba(0,3,50,0.80);
+	border: 5px solid rgba(137,152,50,0.50);
 }
 
 .app-main {
@@ -34,9 +34,12 @@ ul {
   font-weight: bold;
   color: #899832;
   margin-left: 6.5em;
-  outline: 	#899832 1px solid;
+  margin-bottom: 0.25em;
   width: 10em;
   padding-top: 20px;
+  background-color: rgba(0,3,50,0.8);
+  border: 2px solid #899832;
+  border-radius: 25px;
 }
 .strike {
 	text-decoration: line-through;
@@ -70,6 +73,24 @@ ul {
 		#list .items {
 			margin-left: 0em;
 		}
+		body {
+			background-size: 200% 100%;
+			background-position: center;
+		}
+
+}
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+		.container {
+			width: 600px;
+		}
+		#list .items {
+			margin-left: 100px;
+		}
+		body {
+			background-size: 150% 100%;
+			background-position: center;
+		}
+
 }
 
 
