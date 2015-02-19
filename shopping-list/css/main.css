@@ -24,6 +24,24 @@ h1 {
 	color: white;
 	font-weight: bold;
 }
+#input, #submit {
+	height: 50px;
+	border-radius: 10px;
+	padding: 1px;
+	box-sizing: border-box;
+	font-size: 12spx;
+}
+
+#input {
+	width: 18em;
+}
+#submit {
+	background-color: #d26014;
+	border: 2px solid ;
+	color: rgba(0,3,50,1);
+	font-weight: bold;
+	width: 9em;
+}
 ul {
 	list-style: none;
 	text-align: left;
@@ -33,7 +51,7 @@ ul {
   font-size: 2em;
   font-weight: bold;
   color: #899832;
-  margin-left: 6.5em;
+  margin-left: 6.2em;
   margin-bottom: 0.25em;
   width: 10em;
   padding-top: 20px;
