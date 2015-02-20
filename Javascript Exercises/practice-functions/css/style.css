@@ -1,0 +1,15 @@
+pre { 
+  border-bottom: 1px solid lightgrey;
+  padding: 0px 5px;
+  margin 0;
+  height: 1em;
+  line-height: 0em;
+  font-size: 1em;
+  vertical-align: middle;
+}
+
+.console, html, body{
+  margin: 0; padding: 0;
+}
+
+.console { width: 50%; float: left;}
