@@ -15,6 +15,10 @@ $(document).ready(function(){
 	function newGame(){
 		secretNum = Math.floor((Math.random() * 100) + 1);
     $('#guessList').empty();
+    $('#feedback').text("Make your Guess!");
+    $('#userGuess').val('');
+    count = 0
+    difference = 0
 		return secretNum;
 	};
   //Guess list displayed
@@ -35,7 +39,7 @@ $(document).ready(function(){
   		console.log(userGuess)
 
   		if (isNaN(userGuess)) {
-  			$('#feedback').text("Please only input numbers");
+  			$('#feedback').text("Please only input numbers between 1 and 100");
   		} 
   		else if (userGuess === "") {
   			//Do Nothing
@@ -96,7 +100,6 @@ $(document).ready(function(){
   	var txtbox = document.getElementById('userGuess');
 		var txtval = txtbox.value;
 		e.preventDefault();
-
   });
   //USING ENTER TO ENTER AN ITEM
 	$('#userGuess').keyup(function(e){
@@ -105,6 +108,10 @@ $(document).ready(function(){
 			$('#guessButton').click();
 		}
 	});	
+  // New Game button
+  $('.new').click(function(){
+    newGame();
+  });
 });
 
 
