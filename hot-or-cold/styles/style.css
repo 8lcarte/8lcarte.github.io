@@ -343,3 +343,9 @@ ul.guessBox li {
 	margin: 0.2em;
 	color: #fff;
 }
+#close {
+	background-color: red;
+}
+#far {
+	background-color: blue;
+}
