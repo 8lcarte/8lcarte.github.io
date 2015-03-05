@@ -12,7 +12,7 @@ function Printer(divId) {
         t = document.createTextNode(m);
 
     n.appendChild(t);
-    document.getElementById(divId).appendChild(n);
+    document.getElementById(divId).appendChild(t);
     
     lineCount++;
   }

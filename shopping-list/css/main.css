@@ -77,7 +77,8 @@ ul {
 }
 .delete {
 	float: right;
-	margin-top: -.5em;
+	margin-top: -0.5em;
+	margin-right: 0.3em;
 }
 .delete, .check {
 	cursor: pointer;

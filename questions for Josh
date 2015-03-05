@@ -1,5 +1,7 @@
 WHen do ";"s matter?
 
-On line 14-15 of index.js in practice-functions, why is it necessary to do n.appendChild(t) as well as appendChild(n) below?  Isn't that redundant?  When I do it it moves the smae functions to not go line by line?  I'm guessing it has to do with the line count below but I don't really get that.
+On line 14-15 of index.js in practice-functions, why is it necessary to do n.appendChild(t) as well as appendChild(n) below?  Isn't that redundant?  When I do it it moves the same functions to not go line by line?  I'm guessing it has to do with the line count below but I don't really get that.
 
 Why didn't I have to convert to an integer as it suggests in the lesson plan?
+
+How should the response to the guesses look?  How do I make it so the document doesn't reload and change the number?
