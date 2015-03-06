@@ -1,15 +1,10 @@
 
 $(document).ready(function(){
 	
-	var secretNum = null
-	var count = 0
-  var difference = 0
+	var secretNum, count, difference, userGuess
 
 	newGame();
 	console.log(secretNum);
-
-
-
 
 	//New Game Function
 	function newGame(){
@@ -22,66 +17,55 @@ $(document).ready(function(){
 		return secretNum;
 	};
   //Guess list displayed
-  guessTrack = function() {
-      if (secretNum == userGuess) {
-        //Do nothing
-      } else if (difference < 20) {
-        $('#guessList').append('<li id="close">'+userGuess+'</li>');
-      } else if (difference > 20) {
-        $('#guessList').append('<li id="far">'+userGuess+'</li>');
-      }
+  guessTrack = function(backgroundColor) {
+    $('#guessList').append('<li style="background-color: '+backgroundColor+';">'+userGuess+'</li>');
+
   };
 
 	// Guess function
 	$('#guessButton').click(function(event){
   		event.preventDefault();
   		userGuess = $('#userGuess').val();
-  		console.log(userGuess)
+  		console.log(userGuess);
 
   		if (isNaN(userGuess)) {
   			$('#feedback').text("Please only input numbers between 1 and 100");
-  		} 
-  		else if (userGuess === "") {
-  			//Do Nothing
-  		}
-  		else if (userGuess < 1 || userGuess > 100) {
-  			$('#feedback').text("Enter a number between 1 and 100");
-  		}
-  		else {
-	  		difference = Math.abs(userGuess - secretNum);
-			count++;
-			$('span#count').text(count);
-			feedback();
-      guessTrack();
+  		} else if (userGuess < 1 || userGuess > 100) {
+  			  $('#feedback').text("Enter a number between 1 and 100");
+  		} else if (userGuess !== ""){
+  	  		difference = Math.abs(userGuess - secretNum);
+  			  count++;
+  			  $('span#count').text(count);
+    			feedback();
 			};
   	});
 	// Feedback function
 	feedback = function() {
-  		var feedbackText = "Your guess is ";
-  		if (secretNum == userGuess) {
-  			alert("You got it!");
-        location.reload();
-  		} else if (difference < 5) {
-  			$('#feedback').text("BURNING");
-  		} else if (difference < 10) {
-  			$('#feedback').text("HOT");
-  		} else if (difference < 15) {
-  			$('#feedback').text("Warm");
-  		} else if (difference < 20) {
-  			$('#feedback').text("Cold");
-  		} else if (difference < 30) {
-  			$('#feedback').text("Very Cold");
-  		} else if (difference >= 30) {
-  			$('#feedback').text("FREEZING");
-  		};
+  		var feedbackText = ""
 
   		if (secretNum == userGuess) {
-  			$("#feedback").attr("id", "correct");
-  		} else if (difference > 20) {
-  			$("#feedback").css("background-color", "blue");
+  			alert("You got it!");
+        newGame();
+  		} else if (difference < 5) {
+  			feedbackText = "BURNING";
+  		} else if (difference < 10) {
+  			feedbackText = "HOT";
+  		} else if (difference < 15) {
+  			feedbackText = "Warm";
   		} else if (difference < 20) {
-  			$("#feedback").css("background-color", "red");
-  		}
+  			feedbackText = "Cold";
+  		} else if (difference < 30) {
+  			feedbackText = "Very Cold";
+  		} else if (difference >= 30) {
+  			feedbackText = "FREEZING";
+  		};
+      $('#feedback').text(feedbackText);
+
+      var backgroundColor = 'rgb('+(255-2*difference)+',0,'+(2*difference+50)+')';
+      
+      $('#feedback').css("background-color", backgroundColor);
+      guessTrack(backgroundColor);
+
   	};
 
 
@@ -94,12 +78,6 @@ $(document).ready(function(){
   /*--- Hide information modal box ---*/
   $("a.close").click(function(){
   	$(".overlay").fadeOut(1000);
-  });
-  //Submit Function
-  $('#guessButton').click(function(e){
-  	var txtbox = document.getElementById('userGuess');
-		var txtval = txtbox.value;
-		e.preventDefault();
   });
   //USING ENTER TO ENTER AN ITEM
 	$('#userGuess').keyup(function(e){
