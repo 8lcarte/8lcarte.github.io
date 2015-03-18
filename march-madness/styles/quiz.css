@@ -1,0 +1,35 @@
+body {
+	background-image: url('../images/bracket.jpg');
+	background-repeat: no-repeat;
+	background-position: fixed;
+	background-size: 100%;
+}
+
+
+.main-container {
+		margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    width: 53%;
+    background-image: url('../images/basket.jpg');
+    border-radius: 25px;
+    padding-top: 0.01em;
+    padding-bottom: 10em;
+}
+.title {
+	text-align: center;
+	color: white;
+}
+.question {
+	text-align: left;
+	width: 40%;
+	color: blue;
+	margin-left: 1em;
+}
+.option {
+	margin-left: 2em;
+}
+.answer {
+	color: yellow;
+	margin-left: 0.2em;
+}
