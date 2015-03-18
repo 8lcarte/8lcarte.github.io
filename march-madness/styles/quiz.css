@@ -12,9 +12,11 @@ body {
     margin-top: 10%;
     width: 53%;
     background-image: url('../images/basket.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 25px;
     padding-top: 0.01em;
-    padding-bottom: 10em;
+    padding-bottom: 2em;
 }
 .title {
 	text-align: center;
@@ -32,4 +34,33 @@ body {
 .answer {
 	color: yellow;
 	margin-left: 0.2em;
+}
+#submit {
+	background-color: #d26014;
+  border: 2px solid;
+  color: rgba(0,3,50,1);
+  font-weight: bold;
+  margin-left: 20%;
+	margin-top: 3em;
+	padding: 1em;
+
+}
+@media only screen and (max-width: 620px) {
+	.main-container {
+		width: 75%;
+	}
+
+}
+@media only screen and (max-width: 400px) {
+	.main-container {
+		width: 100%;
+	}
+
+@media only screen and (min-width: 920px) {
+	.question, .answer {
+		width: 175;
+	}	
+}
+
+
 }
