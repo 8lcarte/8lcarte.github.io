@@ -6,6 +6,7 @@
 		this.athletic = athletic;
 		this.villain = villain;
 	}
+	var currentQuestion = 0;
 	var userStats = new Stats(0,0,0,0,0)
 
 	function Team(pace, uniqueStyle, pressure, athletic, villain) {
@@ -22,7 +23,7 @@
 	var Oregon = new Team(4,4,3,3,1);
 	var IowaState = new Team(4,2,3,3,2);
 
-
+//UPdate user stats function
 function updateUserStats() {
 	var a = $("input[type='radio']:checked").val();	
 		console.log(a);
@@ -39,21 +40,50 @@ function updateUserStats() {
 		};
 		console.log(userStats);
 	};
+	//Questions Array
+	var questions = [{
+       	question: "Which of the following NBA teams do you enjoy watching the most?",
+       	choices: ["Chicago Bulls", "Cleveland Cavaliers", "Golden State Warriors", "Atlanta Hawks", "San Antonio Spurs"],
+       	qNum : 0,
+       },
+       {
+       	question: "What country is the origin of the arabica coffee plant?",
+       	choices: ["Peru", "Ethiopia", "Indonesia", "Turkey", "another"],
+       	qNum : 1,
+       },
+        {
+
+    }]
+
+
+  //Next question function
+	function nextQuestion() {
+		if (currentQuestion < 8) {
+			var newQuestion = '<h3 class="question">'+questions[currentQuestion + 1].question+'</h3><br><div id="answer_holder"><br><input type="radio" name="option" class="option" value="0"><span class="answer">'+questions[currentQuestion + 1].choices[0]+'</span><br><input type="radio" name="option" class="option" value="1"><span class="answer">'+questions[currentQuestion + 1].choices[1]+'</span><br><input type="radio" name="option" class="option" value="2"><span class="answer">'+questions[currentQuestion + 1].choices[2]+'</span><br><input type="radio" name="option" class="option" value="3"><span class="answer">'+questions[currentQuestion + 1].choices[3]+'</span><br><input type="radio" name="option" class="option" value="4"><span class="answer">'+questions[currentQuestion + 1].choices[4]+'</span></div></div>';
+			$(".question").remove();
+      $("#answer_holder").remove();
+
+      $(".main-container").html(newQuestion);
+		}
+		else {
+
+		}
+	}
+	
 
 
 $(document).ready(function() {
 
-	var currentQuestion = 0;
+
 
 //Submit click funciton
 	$('#submit').click(function(){ 
-
-		updateUserStats();		
+		updateUserStats();
+		nextQuestion();
+		currentQuestion++;		
 	});
 //Update User Stats Function
 	
-
-
 
 
 
