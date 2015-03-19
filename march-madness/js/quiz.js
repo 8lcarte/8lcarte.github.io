@@ -12,9 +12,6 @@
 		return new Stats(pace, uniqueStyle, pressure, athletic, villain);
 	}
 
-	function Answer(pace, uniqueStyle, pressure, athletic, villain) {
-		return new Stats(pace, uniqueStyle, pressure, athletic, villain);
-	}
 //Team Definitions
 	var Virginia = new Team(1,4,1,3,2);
 	var Arizona = new Team(1,3,1,4,3);
@@ -25,12 +22,6 @@
 	var Oregon = new Team(4,4,3,3,1);
 	var IowaState = new Team(4,2,3,3,2);
 
-//Answer Definitions
-	var a = new Answer(1,0,0,0,0);
-	var b = new Answer(0,1,0,0,0);
-	var c = new Answer(0,0,1,0,0);
-	var d = new Answer(0,0,0,1,0);
-	var e = new Answer(0,0,0,0,1);
 
 function updateUserStats() {
 	var a = $("input[type='radio']:checked").val();	
