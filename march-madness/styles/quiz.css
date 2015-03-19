@@ -9,8 +9,9 @@ body {
 .main-container {
 		margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
+    margin-top: 5%;
     width: 53%;
+    height: 400px;
     background-image: url('../images/basket.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,14 +20,19 @@ body {
     padding-bottom: 2em;
 }
 .title {
+	background-color: white;
 	text-align: center;
-	color: white;
+	color: black;
+	margin-top: -0.3em;
+	height: 63px;
+
 }
 .question {
 	text-align: left;
 	width: 40%;
 	color: blue;
 	margin-left: 1em;
+	font-size: 25px;
 }
 .option {
 	margin-left: 2em;
@@ -40,8 +46,8 @@ body {
   border: 2px solid;
   color: rgba(0,3,50,1);
   font-weight: bold;
-  margin-left: 20%;
-	margin-top: 3em;
+  margin-left: 100px;
+	margin-top: 1em;
 	padding: 1em;
 
 }
@@ -51,7 +57,7 @@ body {
 	}
 
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 420px) {
 	.main-container {
 		width: 100%;
 	}
