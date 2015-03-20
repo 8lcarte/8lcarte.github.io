@@ -21,7 +21,7 @@
 	var Duke = new Team(3,1,2,4,4);
 	var VCU = new Team(3,4,4,3,1);
 	var Oregon = new Team(4,4,3,3,1);
-	var IowaState = new Team(4,2,3,3,2);
+
 
 //UPdate user stats function
 function updateUserStats() {
@@ -42,42 +42,71 @@ function updateUserStats() {
 	};
 	//Questions Array
 	var questions = [{
-       	question: "Which of the following NBA teams do you enjoy watching the most?",
-       	choices: ["Chicago Bulls", "Cleveland Cavaliers", "Golden State Warriors", "Atlanta Hawks", "San Antonio Spurs"],
+       	question: "What is your favorite NBA Team?",
+       	choices: ["Chicago Bulls", "San Antonio Spurs", "Memphis Grizzlies", "Cleveland Cavaliers", "LA Lakers"],
        	qNum : 0,
        },
        {
-       	question: "What country is the origin of the arabica coffee plant?",
-       	choices: ["Peru", "Ethiopia", "Indonesia", "Turkey", "another"],
+       	question: "What is your favorite brand?",
+       	choices: ["IBM", "My favorite Etsy Artist", "Uber", "Apple", "Goldman Sachs"],
        	qNum : 1,
        },
         {
-
+        question: "What type college did you attend",
+       	choices: ["None", "Liberal Arts School", "Technical School", "State School", "Ivy League"],
+       	qNum : 2,		
+       },
+        {
+        question: "What is your favorite type of vacation?",
+       	choices: ["Beach", "Exotic", "Mountain", "Trip to the big game", "'Work-ation'"],
+       	qNum : 3,
+       },
+        {
+        question: "What is your favorite type of car?",
+       	choices: ["Sedan", "Tesla", "SUV", "Truck", "Sports Car/Luxury"],
+       	qNum : 4,
+       },
+        {
+        question: "Which of the following states is your favorite?",
+       	choices: ["Alabama", "Texas", "California", "Oregon", "New York"],
+       	qNum : 5,	
+       },
+        {
+        question: "Which of the following movies is your favorite?",
+       	choices: ["Crash", "Pulp Fiction", "Butch Cassidy & The Sundance Kid", "Remember the Titans", "The Godfather"],
+       	qNum : 6,	
+       },
+        {
+        question: "What is your favorite sport?",
+       	choices: ["Baseball", "Other", "Soccer", "Basketball", "Football"],
+       	qNum : 7,	
     }]
 
 
   //Next question function
-	function nextQuestion() {
-		if (currentQuestion < 8) {
-			var newQuestion = '<h3 class="question">'+questions[currentQuestion + 1].question+'</h3><br><div id="answer_holder"><br><input type="radio" name="option" class="option" value="0"><span class="answer">'+questions[currentQuestion + 1].choices[0]+'</span><br><input type="radio" name="option" class="option" value="1"><span class="answer">'+questions[currentQuestion + 1].choices[1]+'</span><br><input type="radio" name="option" class="option" value="2"><span class="answer">'+questions[currentQuestion + 1].choices[2]+'</span><br><input type="radio" name="option" class="option" value="3"><span class="answer">'+questions[currentQuestion + 1].choices[3]+'</span><br><input type="radio" name="option" class="option" value="4"><span class="answer">'+questions[currentQuestion + 1].choices[4]+'</span></div></div>';
-			$(".question").remove();
-      $("#answer_holder").remove();
-
-      $(".main-container").html(newQuestion);
-		}
-		else {
-
-		}
-	}
+	
 	
 
 
 $(document).ready(function() {
 
+	function nextQuestion() {
+		if (currentQuestion < 7) {
+			var newQuestion = '<h3 class="question">'+questions[currentQuestion + 1].question+'</h3><div id="answer_holder"><br><input type="radio" name="option" class="option" value="0"><span class="answer">'+questions[currentQuestion + 1].choices[0]+'</span><br><input type="radio" name="option" class="option" value="1"><span class="answer">'+questions[currentQuestion + 1].choices[1]+'</span><br><input type="radio" name="option" class="option" value="2"><span class="answer">'+questions[currentQuestion + 1].choices[2]+'</span><br><input type="radio" name="option" class="option" value="3"><span class="answer">'+questions[currentQuestion + 1].choices[3]+'</span><br><input type="radio" name="option" class="option" value="4"><span class="answer">'+questions[currentQuestion + 1].choices[4]+'</span></div></div><button type="submit" class="ui-button" id="submit">Submit Answer</button>';
+			$(".question").remove();
+      $("#answer_holder").remove();
+      $(".main-container").html(newQuestion);
+		}
+		else {
+			var result = '<p class="result">Fuck yo shit</p>';
+			$(".main-container").hide();
+			$(".result-container").show();
+      $(".result-container").html(result);
 
-
+		}
+	}
 //Submit click funciton
-	$('#submit').click(function(){ 
+	$('.main-container').on("click","#submit", function(){ 
 		updateUserStats();
 		nextQuestion();
 		currentQuestion++;		
@@ -85,6 +114,20 @@ $(document).ready(function() {
 //Update User Stats Function
 	
 
-
-
 });
+
+
+
+$.each(Virginia, function(k,v) {
+	console.log(v);
+	console.log(Kentucky.k);
+});
+
+
+
+
+
+
+
+
+
