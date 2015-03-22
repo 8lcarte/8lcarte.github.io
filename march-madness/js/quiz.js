@@ -9,19 +9,20 @@
 	var currentQuestion = 0;
 	var userStats = new Stats(0,0,0,0,0)
 	var userDiff = 0
+	userDiffArray = []
 
 	function Team(pace, uniqueStyle, pressure, athletic, villain) {
 		return new Stats(pace, uniqueStyle, pressure, athletic, villain);
 	}
 
 //Team Definitions
-	var virginia = new Team(1,4,1,3,2);
-	var arizona = new Team(1,3,1,4,3);
-	var kentucky = new Team(3,1,2,4,4);
-	var northCarolina = new Team(4,3,2,4,4);
-	var duke = new Team(3,1,2,4,4);
-	var vCU = new Team(3,4,4,3,1);
-	var oregon = new Team(4,4,3,3,1);
+	var virginia = new Team(4,4,1,3,2);
+	var arizona = new Team(4,3,1,4,3);
+	var kentucky = new Team(2,1,2,4,4);
+	var northCarolina = new Team(1,3,2,4,4);
+	var duke = new Team(2,1,2,4,4);
+	var vCU = new Team(2,4,4,3,1);
+	var oregon = new Team(1,4,3,3,1);
 
 	var teamArray = [virginia,arizona,kentucky,northCarolina,duke,vCU,oregon]
 	var nameArray = ["Virginia","Arizona","Kentucky","North Carolina","Duke","VCU","Oregon"]
@@ -96,11 +97,7 @@ function match(userStats, teamArray) {
 				return count;
 			});	
 }
-userDiffArray = match(userStats, teamArray);
-Array.prototype.closest = function(){
-	var a = Math.min.apply(Math, this);
-	return {var index = this.indexOf(a);
-}
+
 
 // var closeTeam;
 // function closest(userDiffArray) {
@@ -118,10 +115,17 @@ $(document).ready(function() {
       $(".main-container").html(newQuestion);
 		}
 		else {
-			var result = "<p class='result'>"+userDiff+"</p>";
+			userDiffArray = match(userStats, teamArray);
+			Array.prototype.closest = function(){
+				var a = Math.min.apply(Math, this);
+				var index = this.indexOf(a);
+				return nameArray[index]
+		}
+			result = userDiffArray.closest();
+			var outcome = "<p class='result'>"+result+"</p>";
 			$(".main-container").hide();
 			$(".result-container").show();
-      $(".result-container").html(result);
+      $(".result-container").html(outcome);
 
 		}
 	}
