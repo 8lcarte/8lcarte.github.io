@@ -122,7 +122,7 @@ $(document).ready(function() {
 				return nameArray[index]
 		}
 			result = userDiffArray.closest();
-			var outcome = "<p class='result'>"+result+"</p>";
+			var outcome = "<p class='result'>You should root for: </br>"+result+"</p>";
 			$(".main-container").hide();
 			$(".result-container").show();
       $(".result-container").html(outcome);
