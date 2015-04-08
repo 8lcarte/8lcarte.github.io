@@ -27,22 +27,31 @@
 	var teamArray = [virginia,arizona,kentucky,northCarolina,duke,vCU,oregon]
 	var nameArray = ["Virginia","Arizona","Kentucky","North Carolina","Duke","VCU","Oregon"]
 
+
 //UPdate user stats function
 function updateUserStats() {
 	var a = $("input[type='radio']:checked").val();	
-		console.log(a);
 		if (a == 0) { 
-			userStats.pace++
+			if (userStats.pace < 4 ) {
+				userStats.pace++;
+			}
 		} else if (a == 1) {
-			userStats.uniqueStyle++
+			if (userStats.uniqueStyle < 4 ) {
+				userStats.uniqueStyle++;
+			}
 		} else if (a == 2) {
-			userStats.pressure++
+			if (userStats.pressure < 4 ) {
+				userStats.pressure++;
+			}
 		} else if (a == 3) {
-			userStats.athletic++
+			if (userStats.athletic < 4 ) {
+				userStats.athletic++;
+			}
 		} else if (a == 4) {
-			userStats.villain++
+			if (userStats.villain < 4 ) {
+				userStats.villain++;
+			}
 		};
-		console.log(userStats);
 	};
 	//Questions Array
 	var questions = [{
