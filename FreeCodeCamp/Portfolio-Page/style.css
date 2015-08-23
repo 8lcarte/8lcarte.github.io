@@ -1,0 +1,82 @@
+/* container boxes */
+.first-container {
+		margin-top: -20px;
+    height: 700px;  
+    text-align: center;
+    background: url('http://outdoorend.com/media/skiing.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+.second-container {
+    height: 700px;  
+    text-align: center;
+    background: url('http://media.cav.s3.amazonaws.com/6155_dsc_3632f.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding-top: 50px;
+}
+.third-container {
+    height: 540px;  
+    text-align: center;
+    background: url('http://cdn.c.photoshelter.com/img-get/I0000b91Ms0gXOvw/s/900/20120908-Penn-State-Virginia-Football194.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+/* first container */
+.header-box {
+	width: 500px;
+	height: 400px;
+	padding-top: 15%;
+}
+.title {
+	color: #FF00FF;
+	font-size: 5em;
+}
+.name {
+	color: blue;
+	font-size: 3em;
+	margin-top: 1em;
+}
+.button-row {
+	margin-top: 12em;
+}
+.btn-links {
+	margin-left: 0.4em;
+}
+
+/* second container */
+
+.about-me-box {
+	width: 400px;
+	height: 600px;
+	border-style: solid;
+	border-color: rgba(0,3,50);
+	border-width: 15px;
+	background-color: rgba(0,3,50,0.80);	
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: 50px;
+	float: left;
+}
+#face {
+	display: inline-block;
+	width: 25em;
+	height: 25em;
+	border-radius: 50%;
+	margin-top: 10em;
+}
+.about-me-header {
+	color: #9900CC;
+}
+.about-me-text {
+	color: white;
+	text-align: left;
+}
+/*third container*/
+
+.third-title {
+	height: 100px;
+	background-color: #000000;
+	text-align: center;
+	color: white;
+	padding-top: 1%;
+}
+
+
