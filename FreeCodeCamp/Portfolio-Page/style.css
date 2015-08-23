@@ -1,4 +1,5 @@
 /* container boxes */
+
 .first-container {
 		margin-top: -20px;
     height: 700px;  
@@ -18,6 +19,7 @@
     text-align: center;
     background: url('http://cdn.c.photoshelter.com/img-get/I0000b91Ms0gXOvw/s/900/20120908-Penn-State-Virginia-Football194.jpg') no-repeat center center fixed;
     background-size: cover;
+    padding-top: 50px;
 }
 /* first container */
 .header-box {
@@ -78,5 +80,17 @@
 	color: white;
 	padding-top: 1%;
 }
-
+ul > li {
+  list-style: none;
+  font-size: 2em;
+  font-weight: bold;
+  color: orange !important;
+  display: inline-block;
+  margin-right: 2em;
+}
+.thumbnail {
+    width: 140px;
+    height: 140px;
+    display: block;
+}
 
