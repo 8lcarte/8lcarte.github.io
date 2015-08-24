@@ -2,23 +2,81 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Portfolio Page</title>
-	<link rel="stylesheet" type="text/css" href="landing.css">
-<!-- Google Analytics -->
-	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	<title>Leeland's Portfolio Page</title>
+	<link rel="stylesheet" href="FreeCodeCamp/Portfolio-Page/bootstrap.min.css" media="screen" type="text/css" />
+	<link rel="stylesheet" href="FreeCodeCamp/Portfolio-Page/style.css" media="screen" type="text/css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">	
+	<script src="FreeCodeCamp/Portfolio-Page/jquery-2.1.4.js"></script>
+	<script src="FreeCodeCamp/Portfolio-Page/script.js"></script>
 
-  ga('create', 'UA-60874440-1', 'auto');
-  ga('send', 'pageview');
-
-</script>	
 </head>
 <body>
-	<h1>Lee's Portfolio Page</h1>
-	<ul class="Links">
+
+	<!--Navbar -->
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">Lee Carter - Wahoo Design</a>
+	    </div>
+	    
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav navbar-right">
+	        <li class="nav-list"><a href="#">Home</a></li>
+	        <li class="nav-list"><a href="#about-me">About</a></li>
+	        <li class="nav-list"><a href="#portfolio">Portfolio</a></li>
+	        <li class="nav-list"><a href="mailto:lee.n.carter90@gmail.com?Subject=Hello%20Leeland" target="_top">Contact</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+
+	
+	<div class="container first-container">
+		<div class="header-box">
+			<h1 class="title">Wahoo Design</h1></br>
+			<h1 class="name">By Lee Carter</h1>
+		</div>
+		<div class="button-row">
+			<a class="btn-links btn btn-info btn-lg" href="https://github.com/8lcarte">
+				<i class="fa  fa-github fa-lg">
+				</i>
+					Github
+			</a>
+			<a class="btn-links btn btn-info btn-lg" href="https://twitter.com/leecarter90">
+				<i class="fa  fa-twitter fa-lg">
+				</i>
+					Twitter
+			</a>
+			<a class="btn-links btn btn-info btn-lg" href="https://www.facebook.com/leecarter1990">
+				<i class="fa  fa-facebook-square fa-lg">
+				</i>
+					Facebook
+			</a>
+		</div>
+		
+	</div>
+	<div class="container second-container" id="about-me">
+		<div class="about-me-box">
+			<h3 class="about-me-header">About Me</h3>
+			<p class="about-me-text">
+			  &nbsp; &nbsp; Learning how to code, one language at a time. This shit can be difficult some times. Located in San Francisco. Consulting rate is $10k per hour.
+			</p>
+			<p class="about-me-text">
+				&nbsp; &nbsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<p class="about-me-text">
+				&nbsp; &nbsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+
+		</div>
+		<img src="https://scontent.fsnc1-1.fna.fbcdn.net/hphotos-xfa1/v/t1.0-9/179908_3378725318246_851668531_n.jpg?oh=16bdcb3ec9c26cd06faf23f074c17c17&oe=567940B7" id="face">
+	</div>
+	<div class="third-title" id="portfolio">
+		<h1 class="portfolio-title">My Portfolio</h1>
+	</div>
+	<div class="container third-container">
+		<ul class="Links">
 		<li>
 			<a href="Thinkful-Stuff/streetfighter/index.html">Street Fighter</a>
 			<img class="thumbnail" src="Thinkful-Stuff/streetfighter/SF.png">
@@ -49,7 +107,5 @@
 		</li>
 	</ul>
 		
-
-
+	</div>
 </body>
-</html>
