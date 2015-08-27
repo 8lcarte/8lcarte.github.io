@@ -1,0 +1,22 @@
+body {
+	background-color: silver;
+}
+
+.Main-Container {
+	margin-left: 30%;
+	margin-right: 30%;
+	text-align: center;
+	height: 25em;
+	border-style: solid;
+	background-color: teal;
+}
+#submit {
+	height: 5em;
+	background-color: blue;
+	color: white;
+	font-weight: bold;
+	border-radius: 50%;
+}
+.quote-container {
+	margin-top: 2.5em;
+}
