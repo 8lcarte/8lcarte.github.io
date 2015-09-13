@@ -5,8 +5,9 @@ body {
 .Main-Container {
 	margin-left: 30%;
 	margin-right: 30%;
+	margin-top: 5%;
 	text-align: center;
-	height: 25em;
+	height: 60%;
 	border-style: solid;
 	background-color: teal;
 }
